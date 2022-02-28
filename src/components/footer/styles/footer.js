@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  min-width: 1000px;
+  max-width: 1000px;
   margin: auto;
   padding: 70px 56px;
   flex-direction: column;
@@ -19,19 +19,22 @@ export const Column = styled.div`
 
 export const Row = styled.div`
   display: grid;
-  grid-template-columns: repeat (auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
   grid-gap: 15px;
 
   @media (max-width: 1000px) {
-    grid-template-columns: repeat (auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 `;
 
 export const Link = styled.a`
   color: #757575;
   margin-bottom: 20px;
-  font-size: 13px;
+  font-size: 14px;
   text-decoration: none;
+  &:hover {
+    color: #fff;
+  }
 `;
 
 export const Title = styled.p`
