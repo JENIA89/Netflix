@@ -1,17 +1,52 @@
-const Footer = ({childre, ...restProps}) => {
-  return <Container {...restProps}>{children}</Container>
-}
+import styled from "styled-components";
 
-export default Footer;
+export const Container = styled.div`
+  min-width: 1000px;
+  margin: auto;
+  padding: 70px 56px;
+  flex-direction: column;
 
-Footer.Row = function FooterRow({childre, ...restProps}) {
-  return <Row {...restProps}>{children}</Row>
-}
+  @media (max-width: 1000px) {
+    padding: 70px 30px;
+  }
+`;
 
-Footer.Column = function FooterColumn({childre, ...restProps}) {
-  return <Column {...restProps}>{children}</Column>
-}
+export const Column = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+`;
 
-Footer.Link = function FooterLink({childre, ...restProps}) {
-  return <Link {...restProps}>{children}</Link>
-}
+export const Row = styled.div`
+  display: grid;
+  grid-template-columns: repeat (auto-fill, minmax(230px, 1fr));
+  grid-gap: 15px;
+
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat (auto-fill, minmax(150px, 1fr));
+  }
+`;
+
+export const Link = styled.a`
+  color: #757575;
+  margin-bottom: 20px;
+  font-size: 13px;
+  text-decoration: none;
+`;
+
+export const Title = styled.p`
+  color: #757575;
+  margin-bottom: 40px;
+  font-size: 16px;
+`;
+
+export const Text = styled.p`
+  color: #757575;
+  margin-bottom: 40px;
+  font-size: 13px;
+`;
+
+export const Break = styled.p`
+  flex-basis: 100%;
+  height: 0;
+`;
